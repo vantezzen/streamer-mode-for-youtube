@@ -1,6 +1,43 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+# Streamer Mode for YouTube
 
-## Getting Started
+Streamer Mode for YouTube blurs personal data and recommendations from YouTube to prevent leaking your data - similar to Discord's Streamer Mode.
+
+This includes:
+
+- Recommendations on the homepage
+- Subscriptions in the sidebar
+- Playlists in the sidebar
+- Recommendations at the end of videos, including on embedded YouTube videos on other pages
+- Recommendations to the right of videos
+- Autoplaying video thumbnail at the end of the video (⚠️ Autoplay will still be enabled, you should disable it separately)
+- Search history
+- Trending page and other pages that might contain personalized recommendations
+- Watch history page
+
+This can be useful for:
+
+- Opening YouTube on streams
+- Opening YouTube in school or work presentations
+- Opening YouTube in a public place
+
+where you don't want to leak your recommendations or search history.
+
+The streamer mode can be easily turned on and off using the added shield icon in the top right of the page. The status of streamer mode will be synced across all your tabs.
+
+This extension does **not**:
+
+- Disable autoplay (which potentially uses recommended videos), you should do that separately
+- Disable clicking on the blurred content
+- Hide account details of the currently logged in account like your YouTube handle, profile picture or comments that you wrote
+- Hide if you are subscribed to a channel or not, e.g. in the search results or below videos
+- Hide the number of views, likes, dislikes, comments, etc. of a video
+- Hide ads that may be personalized
+- Guarantee that other search results (outside of the history items) are not personalized in some way
+- Guarantee that there might not be a short flash of the blurred content before it is blurred
+
+Found content that doesn't get blurred or is not blurred correctly? Please open an issue on GitHub.
+
+## Development
 
 First, run the development server:
 
@@ -12,11 +49,9 @@ npm run dev
 
 Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
-
 For further guidance, [visit our Documentation](https://docs.plasmo.com/)
 
-## Making production build
+### Making production build
 
 Run the following:
 
@@ -28,6 +63,6 @@ npm run build
 
 This should create a production bundle for your extension, ready to be zipped and published to the stores.
 
-## Submit to the webstores
+## License
 
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+This project is licensed under MIT.

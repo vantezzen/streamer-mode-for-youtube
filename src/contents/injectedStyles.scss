@@ -1,0 +1,17 @@
+body.streamer-mode {
+  ytd-browse, // Homepage recommendations
+  ytd-video-preview, // Video preview on mouse hover
+  ytd-watch-next-secondary-results-renderer, // Recommended videos on the right of current video
+  ytp-autonav-endscreen-countdown-overlay, // Autoplay overlay at the end of the video
+  .html5-endscreen // Recommendations at the end of the video
+  {
+    filter: blur(60px);
+  }
+
+  #sections > ytd-guide-section-renderer:nth-child(2), // Subscriptions list on the left sidebar
+  #items > ytd-guide-collapsible-section-entry-renderer, // Playlists on the left sidebar
+  div[role="option"]:has(a[href="#ps"]) // Search history
+  {
+    filter: blur(15px);
+  }
+}

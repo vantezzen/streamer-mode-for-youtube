@@ -1,9 +1,9 @@
 {
   "name": "streamer-mode-for-youtube",
-  "displayName": "Streamer mode for youtube",
-  "version": "0.0.0",
-  "description": "A basic Plasmo extension.",
-  "author": "bennetthollstein",
+  "displayName": "Streamer mode for YouTube",
+  "version": "1.0.0",
+  "description": "Streamer Mode for YouTube blurs personal data and recommendations from YouTube to prevent leaking your data.",
+  "author": "vantezzen",
   "packageManager": "pnpm@6.19.1",
   "scripts": {
     "dev": "plasmo dev",
@@ -13,7 +13,8 @@
   "dependencies": {
     "plasmo": "0.63.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-feather": "^2.0.10"
   },
   "devDependencies": {
     "@plasmohq/prettier-plugin-sort-imports": "3.6.0",
@@ -26,7 +27,8 @@
   },
   "manifest": {
     "host_permissions": [
-      "https://*/*"
+      "https://*.youtube.com/*",
+      "https://www.youtube-nocookie.com/*"
     ]
   }
 }
